@@ -1,0 +1,241 @@
+body{
+    background-color: rgba(18, 64, 192);
+    margin: 0;
+    height: 100vh;
+}
+.page {
+    margin: auto;
+    display: grid;
+    width: 90%;
+    height: 100%;
+    grid-template-areas:
+      "head"
+      "nav"
+      "main"
+      "foot";
+    grid-template-rows: 50px 70px 1fr 50px;
+}
+  
+header {
+    grid-area: head;
+    color: rgb(192, 146, 18);
+    text-align: center;
+    background-color:rgb(65,65,65);
+}
+  
+nav {
+    grid-area: nav;
+    background-color: rgb(65,65,65);
+}
+
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    list-style-type: none;
+    text-align:center;
+    padding: 10px;
+}
+
+a{
+    color:rgb(18, 192, 146);
+}
+
+a:hover{
+    color:rgb(182,200,250);
+}
+  
+main {
+    grid-area: main;
+    background-color: rgb(65,65,65);
+}
+  
+footer {
+    grid-area: foot;
+    background-color: rgb(65,65,65);
+}
+
+p{
+    background-color: rgb(65,65,65);
+    color:rgb(192, 146, 18);
+}
+
+table, p{
+    background-color: rgb(65,65,65);
+    color:rgb(192, 146, 18);
+    text-align: center;
+}
+
+.sida1table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width:60%;
+    color:white;
+    grid-area: tabell;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Grupp A + B --------------------------------------------------------*/
+.page2 {
+    margin: auto;
+    display: grid;
+    width: 96%;
+    height: 96%;
+    grid-template-areas:
+      "head"
+      "nav"
+      "mainAB"
+      "foot";
+    grid-template-rows: 50px 70px 1fr 50px;
+}
+
+.SubaruGruppA{
+    grid-area: SubaruGruppA;
+    width: 30vw;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.LancerGruppA{
+    grid-area: LancerGruppA;
+    width: 30vw;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.CelicaGruppA{
+    grid-area: CelicaGruppA;
+    width: 50vw;
+}
+
+.Lorem_ipsum1{
+    grid-area: Lorem_ipsum1;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Lorem_ipsum2{
+    grid-area: Lorem_ipsum2;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Subaru_titel{
+    grid-area: Subaru_titel;
+    color:rgb(192, 146, 18);
+    margin: auto;
+    font-size: 40px;
+}
+
+.Mitsubishi_titel{
+    grid-area: Mitsubishi_titel;
+    color:rgb(192, 146, 18);
+    margin: auto;
+    font-size: 40px;
+}
+
+.GruppABrad1{
+    grid-area: GruppABrad1;
+    display: grid;
+    grid-template-areas:
+    "Subaru_titel SubaruGruppA"
+    "Lorem_ipsum1 SubaruGruppA";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 60px 1fr;
+}
+
+.GruppABrad2{
+    grid-area: GruppABrad2;
+    display: grid;
+    grid-template-areas:
+    "LancerGruppA Mitsubishi_titel"
+    "LancerGruppA Lorem_ipsum2";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 60px 1fr;
+}
+
+.GruppABrad3{
+    grid-area: GruppABrad3;
+    margin: auto;
+}
+
+.GruppAB{
+    grid-area: mainAB;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+    "GruppABrad1"
+    "GruppABrad2"
+    "GruppABrad3";
+    grid-template-rows: auto auto auto;
+    background-color: rgb(65,65,65);
+}
+
+figcaption{
+    background-color: rgb(65,65,65);
+    color:rgb(192, 146, 18);
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Grupp1 -------------------------------------------------*/
+
+.page3 {
+    margin: auto;
+    display: grid;
+    width: 96%;
+    height: 96%;
+    grid-template-areas:
+      "head"
+      "nav"
+      "main1"
+      "foot";
+    grid-template-rows: 50px 70px 1fr 50px;
+}
+
+#Grupp1{
+    grid-area: main1;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+    "Grupp1rad1"
+    "."
+    "Grupp1rad2";
+    grid-template-rows: auto 20px auto;
+    background-color: rgb(65,65,65);
+}
+
+.Grupp1rad1{
+    grid-area: Grupp1rad1;
+    display: grid;
+    grid-template-areas:
+    " KadettGrupp1 Lorem_ipsum ";
+    grid-template-columns: 1fr 2fr;
+}
+
+.Grupp1rad2{
+    grid-area: Grupp1rad2;
+    display: grid;
+    grid-template-areas:
+    " Grupp1Tabell ";
+}
+
+
+#Grupp1Tabell, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 80vw;
+    color:white;
+    grid-area: Grupp1Tabell;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.KadettGrupp1{
+    grid-area: KadettGrupp1;
+    width: 30vw;
+}
+
+/* WRC ----------------------------------------------------*/
+

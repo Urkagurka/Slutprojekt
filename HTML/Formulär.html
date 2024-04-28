@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="sv">                                             
+    <head>                                                                    
+        <meta charset="utf-8">                        
+        <title>
+            Rally
+        </title>         
+        <link href="../CSS/style.css" rel="stylesheet">     
+    </head>                                           
+    <body>                                           
+        <section class ="page">                       
+        <header>                                    
+            <h1>
+                Rally
+            </h1>             
+        </header>                                    
+        <nav>                                         
+            <ul>                                       
+                <li><a href="../index.html">Start</a></li>
+                <li><a href="Grupp_1.html">Grupp 1</a></li>
+                <li><a href="Grupp_A.html">Grupp A</a></li>
+                <li><a href="Grupp_B.html">Grupp B</a></li>
+                <li><a href="WRC.html">WRC</a></li>
+                <li><a href="formulär.html">Formulär</a></li>
+            </ul>                                       
+        </nav>
+        <form action="index.html" method="post">
+
+            <!--Radioknappar-->
+            <!----------------------------------------------------------->
+            <p>Har du körkort?</p>
+            <p>
+                <input type="radio" id="a1"
+                name="Körkort"
+                value="1" checked="checked">
+                <label for="a1">Jag har körkort</label>
+
+                <input type="radio" id="a2"
+                name="Körkort"
+                value="2">
+                <label for="a2">Jag håller på att skaffa körkort</label>
+
+                <input type="radio" id="a3"
+                name="Körkort"
+                value="3">
+                <label for="a3">Jag har inte körkort</label>
+            </p>
+
+            <!------------------------------------------------------------>
+
+            <p>Har du bil?</p>
+            <p>
+                <input type="radio" id="b1"
+                name="Bil"
+                value="1" checked="checked">
+                <label for="b1">Jag har bil</label>
+
+                <input type="radio" id="b2"
+                name="Bil"
+                value="2">
+                <label for="b2">Jag håller på att skaffa bil</label>
+
+                <input type="radio" id="b3"
+                name="Bil"
+                value="3">
+                <label for="b3">Jag har inte bil</label>
+            </p>
+
+            <!--Textrutor-->
+            <!------------------------------------------------------------>
+          
+            <p>
+                Vilket märke är din bil:
+            </p>
+            <p>
+                <input type="text" name="bilmärke">
+            </p>
+            <!----------------------------------------------------------->
+            <p>
+                Vilken modell är din bil:
+            </p>
+            <p>
+                <input type="text" name="bilmodell">
+            </p>
+            <!----------------------------------------------------------->
+            <p>
+                Vilket år är din bil från:
+            </p>
+            <p>
+                <input type="text" name="modellår">
+            </p>
+
+
+
+            <!--Checkboxar-->
+            <!----------------------------------------------------------------->
+
+            <p>Byter du motorolja i din egna bil?</p>
+            <input type="checkbox" id="ch_a1"
+            name="Motorolja" 
+            value="1">
+            <label for="ch_a1">Ja</label>
+
+            <input type="checkbox" id="ch_a2"
+            name="Motorolja"
+            value="2">
+            <label for="ch_a2">Nej</label>
+
+            <!----------------------------------------------------------->
+
+            <p>Byter du någon av de andra vätskorna i din bil själv?</p>
+            <input type="checkbox" id="ch_b1"
+            name="Vätskor"
+            value="1">
+            <label for="ch_b1">Alla</label>
+
+            <input type="checkbox" id="ch_b2"
+            name="Vätskor"
+            value="2">
+            <label for="ch_b2">Många av dem</label>
+
+            <input type="checkbox" id="ch_b3"
+            name="Vätskor"
+            value="3">
+            <label for="ch_b3">Några av dem</label>
+
+            <input type="checkbox" id="ch_b4"
+            name="Vätskor"
+            value="4">
+            <label for="ch_b4">Inga</label>
+
+
+            <!----------------------------------------------------------->
+
+            <p>
+                Är din bil en bra första bil?
+            </p>
+            <select size="1" name="Förstabil">
+                <option>Ja</option>
+                <option>Om man har mycket plats att jobba på</option>
+                <option>Om man har mycket pengar</option>
+                <option>Om man har en verkstad</option>
+                <option>Nej</option>
+
+            </select>
+
+            <!----------------------------------------------------------->
+            <p>
+                <input type="submit" value="skicka">
+
+            </p>
+        </form>
+
+    </body>
+
+</html>
