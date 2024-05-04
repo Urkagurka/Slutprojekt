@@ -1,7 +1,8 @@
-body{
-    background-color: rgba(18, 64, 192);
+body {
+    background-color: #1240C0;
     margin: 0;
     height: 100vh;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .page {
     margin: auto;
@@ -28,7 +29,7 @@ nav {
     background-color: rgb(65,65,65);
 }
 
-ul{
+ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
     list-style-type: none;
@@ -36,46 +37,56 @@ ul{
     padding: 10px;
 }
 
-a{
+a:link {
     color:rgb(18, 192, 146);
 }
-
-a:hover{
+a:visited {
+    color:rgb(18, 192, 146);
+}
+a:hover {
     color:rgb(182,200,250);
 }
-  
+a:active {
+    color: rgb(101, 36, 107);
+}
+
+tr:nth-child(even) {            
+    background-color: rgb(90,90,90);
+}
+
 main {
-    grid-area: main;
+    grid-area: main;            /*  */
     background-color: rgb(65,65,65);
 }
   
-footer {
+footer {                        /* här sätter jag bakgrundsfärg och namn i grid till min footer */
     grid-area: foot;
     background-color: rgb(65,65,65);
 }
 
-p{
-    background-color: rgb(65,65,65);
+p {                             /* här byter jag färg på texten*/
     color:rgb(192, 146, 18);
 }
 
-table, p{
-    background-color: rgb(65,65,65);
-    color:rgb(192, 146, 18);
+table p {                       /* här använder jag en avkomling selector för att det var ett ställe där det passade in */
+    color:rgb(192, 146, 18);  /* Jag byter färg på alla p innuti en tabell och centrerar dem */
     text-align: center;
 }
 
-.sida1table, th, td {
+tr > td  {                      /* här använder jag en barn selector för att det var ett ställe där jag enkelt kunde andvända det */
+    text-align: center;         
+}
+
+.sida1table, th, td {           /* här skapar jag border och bestämmer hur tabellen ska se ut */
     border: 1px solid black;
     border-collapse: collapse;
     width:60%;
-    color:white;
     grid-area: tabell;
     margin-left: auto;
     margin-right: auto;
 }
 /*Grupp A + B --------------------------------------------------------*/
-.page2 {
+.page2 {                        /* här är min grid layout till sidan för grupp A och B */
     margin: auto;
     display: grid;
     width: 96%;
@@ -88,22 +99,22 @@ table, p{
     grid-template-rows: 50px 70px 1fr 50px;
 }
 
-.SubaruGruppA{
-    grid-area: SubaruGruppA;
+.GruppABBild1{
+    grid-area: GruppABBild1;
     width: 30vw;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.LancerGruppA{
-    grid-area: LancerGruppA;
+.GruppABBild2{
+    grid-area: GruppABBild2;
     width: 30vw;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.CelicaGruppA{
-    grid-area: CelicaGruppA;
+.GruppABBild3{
+    grid-area: GruppABBild3;
     width: 50vw;
 }
 
@@ -121,15 +132,15 @@ table, p{
     margin-right: 10px;
 }
 
-.Subaru_titel{
-    grid-area: Subaru_titel;
+.titel1{
+    grid-area: titel1;
     color:rgb(192, 146, 18);
     margin: auto;
     font-size: 40px;
 }
 
-.Mitsubishi_titel{
-    grid-area: Mitsubishi_titel;
+.titel2{
+    grid-area: titel2;
     color:rgb(192, 146, 18);
     margin: auto;
     font-size: 40px;
@@ -139,8 +150,8 @@ table, p{
     grid-area: GruppABrad1;
     display: grid;
     grid-template-areas:
-    "Subaru_titel SubaruGruppA"
-    "Lorem_ipsum1 SubaruGruppA";
+    "titel1       GruppABBild1"
+    "Lorem_ipsum1 GruppABBild1";
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 60px 1fr;
 }
@@ -149,8 +160,8 @@ table, p{
     grid-area: GruppABrad2;
     display: grid;
     grid-template-areas:
-    "LancerGruppA Mitsubishi_titel"
-    "LancerGruppA Lorem_ipsum2";
+    "GruppABBild2 titel2"
+    "GruppABBild2 Lorem_ipsum2";
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 60px 1fr;
 }
@@ -218,7 +229,9 @@ figcaption{
     grid-area: Grupp1rad2;
     display: grid;
     grid-template-areas:
-    " Grupp1Tabell ";
+    " Grupp1Tabell "
+    " märken ";
+    grid-template-rows: auto auto;
 }
 
 
@@ -235,7 +248,234 @@ figcaption{
 .KadettGrupp1{
     grid-area: KadettGrupp1;
     width: 30vw;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.märken{
+    grid-area: märken;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(192, 146, 18);
 }
 
 /* WRC ----------------------------------------------------*/
 
+.page4 {
+    margin: auto;
+    display: grid;
+    width: 96%;
+    height: 96%;
+    grid-template-areas:
+      "head"
+      "nav"
+      "mainWRC"
+      "foot";
+    grid-template-rows: 50px 70px 1fr 50px;
+}
+
+#GruppWRC{
+    grid-area: mainWRC;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+    "WRCrad1 . WRCrad2"
+    ". . ." 
+    "WRCrad3 WRCrad3 WRCrad3";
+    grid-template-rows: auto 20px auto;
+    grid-template-columns: 1fr 50px 1fr;
+    background-color: rgb(65,65,65);
+}
+
+
+.WRCrad1{
+    grid-area: WRCrad1;
+    display: grid;
+    grid-template-areas:
+    " RepsolWRC "
+    " Lorem_ipsum1WRC ";
+    grid-template-rows: 1fr 1fr;
+}
+
+.WRCrad2{
+    grid-area: WRCrad2;
+    display: grid;
+    grid-template-areas:
+    " StratosWRC "
+    " Lorem_ipsum2WRC ";
+    grid-template-rows: 1fr 1fr;
+}
+
+.WRCrad3{
+    grid-area: WRCrad3;
+    /*video*/
+}
+
+.RepsolWRC{
+    grid-area: RepsolWRC;
+    height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.StratosWRC{
+    grid-area: StratosWRC;
+    height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Lorem_ipsum1WRC{
+    grid-area: Lorem_ipsum1WRC;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Lorem_ipsum2WRC{
+    grid-area: Lorem_ipsum2WRC;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Lorem_ipsum3WRC{
+    grid-area: Lorem_ipsum3WRC;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.rallyvideo{
+    height: 60vh;
+}
+
+/*---Formulär----------------------------------------------------------------*/
+
+.page5 {
+    margin: auto;
+    display: grid;
+    width: 96%;
+    height: 96%;
+    grid-template-areas:
+      "head"
+      "nav"
+      "mainFormulär"
+      "foot";
+    grid-template-rows: 50px 70px 1fr 50px;
+}
+
+.mainFormulär{
+    grid-area: mainFormulär;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+    "Formulär";
+    grid-template-rows: auto;
+    background-color: rgb(65,65,65);
+}
+
+.Formulär{
+    grid-area: Formulär;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+    " Formrad1 "
+    " . " 
+    " Formrad2 "
+    " . "
+    " Formrad3 "
+    " . "
+    " Formrad4 ";
+    grid-template-rows: auto 20px auto 20px auto 20px auto;
+    background-color: rgb(65,65,65);
+}
+
+
+.Formrad1{
+    grid-area: Formrad1;
+    display: grid;
+    grid-template-areas:
+    " Password "
+    " Radio1 "
+    " Radio2";
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.Formrad2{
+    grid-area: Formrad2;
+    display: grid;
+    grid-template-areas:
+    " textruta1 "
+    " textruta2 "
+    " textruta3 "
+    " textruta4 ";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.Formrad3{
+    grid-area: Formrad3;
+    display: grid;
+    grid-template-areas:
+    " checkbox1 "
+    " checkbox2 ";
+    grid-template-rows: 1fr 1fr;
+}
+
+.Formrad4{
+    grid-area: Formrad4;
+    display: grid;
+    grid-template-areas:
+    " Dropdownfråga "
+    " Submit ";
+    grid-template-rows: 0.5fr 0.5fr;
+}
+
+.Password{
+    grid-area:Password;
+    margin: auto;
+}
+.Radio1{
+    grid-area:Radio1;
+    margin: auto;
+}
+.Radio2{
+    grid-area:Radio2;
+    margin: auto;
+}
+.textruta1{
+    grid-area:textruta1;
+    margin: auto;
+}
+.textruta2{
+    grid-area:textruta2;
+    margin: auto;
+}
+.textruta3{
+    grid-area:textruta3;
+    margin: auto;
+}
+.textruta4{
+    grid-area:textruta4;
+    margin: auto;
+}
+.checkbox1{
+    grid-area:checkbox1;
+    margin: auto;
+}
+.checkbox2{
+    grid-area:checkbox2;
+    margin: auto;
+}
+.Dropdownfråga{
+    grid-area:Dropdownfråga;
+    margin: auto;
+}
+.Submit{
+    grid-area:Submit;
+    margin: auto;
+}
+
+label{
+    color:rgb(192, 146, 18);
+}
