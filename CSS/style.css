@@ -7,21 +7,29 @@ body {
 .page {
     margin: auto;
     display: grid;
-    width: 90%;
-    height: 100%;
+    width: 96%;
+    height: 96%;
     grid-template-areas:
       "head"
-      "nav"
       "main"
       "foot";
-    grid-template-rows: 50px 70px 1fr 50px;
+    grid-template-rows: 140px 1fr 50px;
 }
   
 header {
     grid-area: head;
+    display: grid;
+    grid-template-areas:
+    "Titel"
+    "nav";
+    grid-template-rows: 70px 70px;
+    background-color:rgb(65,65,65);
+}
+
+.Titel {
+    grid-area: Titel;
     color: rgb(192, 146, 18);
     text-align: center;
-    background-color:rgb(65,65,65);
 }
   
 nav {
@@ -35,6 +43,12 @@ ul {
     list-style-type: none;
     text-align:center;
     padding: 10px;
+}
+
+ol {
+    border: 2px solid rgba(192, 146, 18, 0.205);
+    border-collapse: collapse;
+    border-radius: 5px;
 }
 
 a:link {
@@ -55,7 +69,7 @@ tr:nth-child(even) {
 }
 
 main {
-    grid-area: main;            /*  */
+    grid-area: main;            
     background-color: rgb(65,65,65);
 }
   
@@ -64,7 +78,7 @@ footer {                        /* här sätter jag bakgrundsfärg och namn i gr
     background-color: rgb(65,65,65);
 }
 
-p {                             /* här byter jag färg på texten*/
+p , label {                     /* här byter jag färg på texten*/
     color:rgb(192, 146, 18);
 }
 
@@ -98,10 +112,9 @@ footer > p {
     height: 96%;
     grid-template-areas:
       "head"
-      "nav"
       "mainAB"
       "foot";
-    grid-template-rows: 50px 70px 1fr 50px;
+    grid-template-rows: 140px 1fr 50px;
 }
 
 .GruppABBild1{
@@ -204,10 +217,9 @@ figcaption{
     height: 96%;
     grid-template-areas:
       "head"
-      "nav"
       "main1"
       "foot";
-    grid-template-rows: 50px 70px 1fr 50px;
+    grid-template-rows: 140px 1fr 50px;
 }
 
 #Grupp1{
@@ -273,10 +285,9 @@ figcaption{
     height: 96%;
     grid-template-areas:
       "head"
-      "nav"
       "mainWRC"
       "foot";
-    grid-template-rows: 50px 70px 1fr 50px;
+    grid-template-rows: 140px 1fr 50px;
 }
 
 #GruppWRC{
@@ -366,10 +377,9 @@ figcaption{
     height: 96%;
     grid-template-areas:
       "head"
-      "nav"
       "mainFormulär"
       "foot";
-    grid-template-rows: 50px 70px 1fr 50px;
+    grid-template-rows: 140px 1fr 50px;
 }
 
 .mainFormulär{
@@ -435,7 +445,7 @@ figcaption{
     grid-template-areas:
     " Dropdownfråga "
     " Submit ";
-    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .Password{
@@ -481,8 +491,4 @@ figcaption{
 .Submit{
     grid-area:Submit;
     margin: auto;
-}
-
-label{
-    color:rgb(192, 146, 18);
 }

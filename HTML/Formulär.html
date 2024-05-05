@@ -11,25 +11,25 @@
     <body>                                           
         <div class ="page5">                       
             <header>                                    
-                <h1>
+                <h1 class="Titel">
                     Formulär
-                </h1>             
+                </h1>
+                <nav>                                         
+                    <ul>                                       
+                        <li><a href="../index.html">Start</a></li>
+                        <li><a href="Grupp_1.html">Grupp 1</a></li>
+                        <li><a href="Grupp_A.html">Grupp A</a></li>
+                        <li><a href="Grupp_B.html">Grupp B</a></li>
+                        <li><a href="WRC.html">WRC</a></li>
+                        <li><a href="formulär.html">Formulär</a></li>
+                    </ul>                                       
+                </nav>             
             </header>                                    
-            <nav>                                         
-                <ul>                                       
-                    <li><a href="../index.html">Start</a></li>
-                    <li><a href="Grupp_1.html">Grupp 1</a></li>
-                    <li><a href="Grupp_A.html">Grupp A</a></li>
-                    <li><a href="Grupp_B.html">Grupp B</a></li>
-                    <li><a href="WRC.html">WRC</a></li>
-                    <li><a href="formulär.html">Formulär</a></li>
-                </ul>                                       
-            </nav>
             <main class="mainFormulär">
-                <form action="../index.html" method="POST" class="Formulär">
+                <form action="../index.html" method="GET" class="Formulär">     <!-- Jag använder GET eftersom att jag inte har någon stans att skicka svaren så alltså är det bara GET som fungerar -->
                     <section class="Formrad1">
                         <!--Password-->
-                        <!------------------------------------------------------------->
+                        <!-- ________________________________________________________________ -->
                     
                         <section class="Password">
                             <label for="p1">Lösenord</label>
@@ -37,7 +37,7 @@
                         </section>
                     
                         <!--Radioknappar-->
-                        <!----------------------------------------------------------->
+                        <!-- ________________________________________________________________ -->
 
                         <section class="Radio1">
                             <p>Har du körkort?</p>
@@ -51,7 +51,7 @@
                             <label for="a3">Jag har inte körkort</label>
                         </section>
                         
-                        <!------------------------------------------------------------>
+                        <!-- ________________________________________________________________ -->
                         <section class="Radio2">
                             <p>Har du bil?</p>
                             <input type="radio" id="b1" name="Bil" value="1" checked="checked">
@@ -65,7 +65,7 @@
                         </section>
                     </section>
                         <!--Textrutor-->
-                        <!------------------------------------------------------------>
+                        <!-- ________________________________________________________________ -->
                     <section class="Formrad2">
                         <section class="textruta1">
                             <label>
@@ -73,21 +73,21 @@
                             </label>
                             <input type="text" name="bilmärke">
                         </section>
-                        <!----------------------------------------------------------->
+                        <!-- ________________________________________________________________ -->
                         <section class="textruta2">
                             <label>
                                 Vilken modell är din bil:
                             </label>
                             <input type="text" name="bilmodell">
                         </section>
-                        <!----------------------------------------------------------->
+                        <!-- ________________________________________________________________ -->
                         <section class="textruta3">
                             <label>
                                 Vilket år är din bil från:
                             </label>
                             <input type="text" name="modellår">
                         </section>
-                        <!------------------------------------------------------------->
+                        <!-- ________________________________________________________________ -->
                         <section class="textruta4">
                             <label>
                                 Kommentar:
@@ -96,7 +96,7 @@
                         </section>
                     </section>
                         <!--Checkboxar-->
-                        <!----------------------------------------------------------------->
+                        <!-- ________________________________________________________________ -->
                     <section class="Formrad3">
                         <section class="checkbox1">
                             <p>Byter du motorolja i din egna bil?</p>
@@ -110,7 +110,7 @@
                             value="2">
                             <label for="ch_a2">Nej</label>
                         </section>
-                        <!----------------------------------------------------------->
+                        <!-- ________________________________________________________________ -->
                         <section class="checkbox2">
                             <p>Byter du någon av de andra vätskorna i din bil själv?</p>
                             <input type="checkbox" id="ch_b1"
@@ -134,7 +134,7 @@
                             <label for="ch_b4">Inga</label>
                         </section>
                     </section>
-                        <!----------------------------------------------------------->
+                        <!-- ________________________________________________________________ -->
                     <section class="Formrad4">
                         <section class="Dropdownfråga">
                             <label for="förastagbil">Är din bil en bra förstabil</label>
@@ -146,7 +146,7 @@
                                 <option>Nej</option>
                             </select>
                         </section>
-                        <!----------------------------------------------------------->
+                        <!-- ________________________________________________________________ -->
                         <section class="Submit">
                             <p>
                                 <input type="submit" value="skicka">
