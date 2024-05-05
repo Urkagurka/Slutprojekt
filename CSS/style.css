@@ -77,6 +77,11 @@ tr > td  {                      /* här använder jag en barn selector för att 
     text-align: center;         
 }
 
+footer > p {
+    text-align: center;
+    font-size: 1em;             /* här använder ja 1em eftersom att det inte kommer göra någon skillnad på hur stor texten är */
+}
+
 .sida1table, th, td {           /* här skapar jag border och bestämmer hur tabellen ska se ut */
     border: 1px solid black;
     border-collapse: collapse;
@@ -287,14 +292,13 @@ figcaption{
     background-color: rgb(65,65,65);
 }
 
-
 .WRCrad1{
     grid-area: WRCrad1;
     display: grid;
     grid-template-areas:
     " RepsolWRC "
     " Lorem_ipsum1WRC ";
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
 }
 
 .WRCrad2{
@@ -303,12 +307,15 @@ figcaption{
     grid-template-areas:
     " StratosWRC "
     " Lorem_ipsum2WRC ";
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
 }
 
 .WRCrad3{
     grid-area: WRCrad3;
-    /*video*/
+    display: grid;
+    grid-template-areas: 
+    " Rallyvideo . Lorem_ipsum3WRC ";
+    grid-template-columns: auto 20px auto;
 }
 
 .RepsolWRC{
