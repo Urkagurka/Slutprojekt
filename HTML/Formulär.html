@@ -26,23 +26,23 @@
                 </nav>             
             </header>                                    
             <main class="mainFormulär">
-                <form action="../index.html" method="GET" class="Formulär">     <!-- Jag använder GET eftersom att jag inte har någon stans att skicka svaren så alltså är det bara GET som fungerar -->
+                <form action="../index.html" method="GET" class="Formulär">     <!-- Jag skapar mitt formulär och använder GET eftersom att jag inte har någon stans att skicka svaren så alltså är det bara GET som fungerar -->
                     <section class="Formrad1">
                         <!--Password-->
                         <!-- ________________________________________________________________ -->
                     
-                        <section class="Password">
-                            <label for="p1">Lösenord</label>
-                            <input type="password" id="p1">
+                        <section class="Password">                              <!-- här får användaren skriva in sitt password  -->
+                            <label for="p1">Lösenord</label>                    <!-- här är min label för lösenordet som är texten bredvid -->
+                            <input type="password" name="password" id="p1">     <!-- här bestämmer jag att den ska vara typen password och ha id=p1 -->
                         </section>
                     
                         <!--Radioknappar-->
                         <!-- ________________________________________________________________ -->
 
-                        <section class="Radio1">
-                            <p>Har du körkort?</p>
+                        <section class="Radio1">                                <!-- här är sektionen för mina radioknappar -->
+                            <p>Har du körkort?</p>                              <!-- här är frågan till radiknappen -->
                             <input type="radio" id="a1" name="Körkort" value="1" checked="checked">
-                            <label for="a1">Jag har körkort</label>
+                            <label for="a1">Jag har körkort</label>             <!-- här har jag en label för den som id=a1 och raden över bestämmer id/name/value och alla sådana saker -->
                         
                             <input type="radio" id="a2" name="Körkort" value="2">
                             <label for="a2">Jag håller på att skaffa körkort</label>
@@ -71,7 +71,7 @@
                             <label>
                                 Vilket märke är din bil:
                             </label>
-                            <input type="text" name="bilmärke">
+                            <input type="text" name="bilmärke">                 <!-- här väljer jag att det ska vara en textruta med namnet bilmärke -->
                         </section>
                         <!-- ________________________________________________________________ -->
                         <section class="textruta2">
@@ -97,7 +97,7 @@
                     </section>
                         <!--Checkboxar-->
                         <!-- ________________________________________________________________ -->
-                    <section class="Formrad3">
+                    <section class="Formrad3">                                  <!-- Här är första sektionen med checkboxar -->
                         <section class="checkbox1">
                             <p>Byter du motorolja i din egna bil?</p>
                             <input type="checkbox" id="ch_a1"
@@ -135,10 +135,10 @@
                         </section>
                     </section>
                         <!-- ________________________________________________________________ -->
-                    <section class="Formrad4">
+                    <section class="Formrad4">                                  <!-- här är sektionen för del 4 i formuläret (innehåller drop down och submit) -->
                         <section class="Dropdownfråga">
                             <label for="förastagbil">Är din bil en bra förstabil</label>
-                            <select size="1" name="Förstabil" id="förastagbil">
+                            <select size="1" name="Förstabil" id="förastagbil"> <!-- här är en dropdown meny och här under är de olika valen man kan välja mellan -->
                                 <option>Ja</option>
                                 <option>Om man har mycket plats att jobba på</option>
                                 <option>Om man har mycket pengar</option>
@@ -147,7 +147,7 @@
                             </select>
                         </section>
                         <!-- ________________________________________________________________ -->
-                        <section class="Submit">
+                        <section class="Submit">                                <!-- här har jag en section för bara submit knappen för att lägga den i en grid i css -->
                             <p>
                                 <input type="submit" value="skicka">
                             </p>
