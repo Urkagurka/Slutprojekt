@@ -26,7 +26,7 @@
                 </nav>             
             </header>                                    
             <main class="mainFormulär">
-                <form action="../index.html" method="GET" class="Formulär">     <!-- Jag skapar mitt formulär och använder GET eftersom att jag inte har någon stans att skicka svaren så alltså är det bara GET som fungerar -->
+                <form action="../index.html" method="POST" class="Formulär">     <!-- Jag skapar mitt formulär och använder GET eftersom att jag inte har någon stans att skicka svaren så alltså är det bara GET som fungerar -->
                     <section class="Formrad1">
                         <!--Password-->
                         <!-- ________________________________________________________________ -->
@@ -68,31 +68,31 @@
                         <!-- ________________________________________________________________ -->
                     <section class="Formrad2">
                         <section class="textruta1">
-                            <label>
+                            <label for="t1">
                                 Vilket märke är din bil:
                             </label>
-                            <input type="text" name="bilmärke">                 <!-- här väljer jag att det ska vara en textruta med namnet bilmärke -->
+                            <input type="text" name="bilmärke" id="t1">                 <!-- här väljer jag att det ska vara en textruta med namnet bilmärke -->
                         </section>
                         <!-- ________________________________________________________________ -->
                         <section class="textruta2">
-                            <label>
+                            <label for="t2">
                                 Vilken modell är din bil:
                             </label>
-                            <input type="text" name="bilmodell">
+                            <input type="text" name="bilmodell" id="t2">
                         </section>
                         <!-- ________________________________________________________________ -->
                         <section class="textruta3">
-                            <label>
+                            <label for="t3">
                                 Vilket år är din bil från:
                             </label>
-                            <input type="text" name="modellår">
+                            <input type="text" name="modellår" id="t3">
                         </section>
                         <!-- ________________________________________________________________ -->
                         <section class="textruta4">
-                            <label>
+                            <label for="k1">
                                 Kommentar:
                             </label>
-                            <textarea name="kommentar"></textarea>
+                            <textarea name="kommentar" id="k1"></textarea>
                         </section>
                     </section>
                         <!--Checkboxar-->
@@ -137,13 +137,13 @@
                         <!-- ________________________________________________________________ -->
                     <section class="Formrad4">                                  <!-- här är sektionen för del 4 i formuläret (innehåller drop down och submit) -->
                         <section class="Dropdownfråga">
-                            <label for="förastagbil">Är din bil en bra förstabil</label>
-                            <select size="1" name="Förstabil" id="förastagbil"> <!-- här är en dropdown meny och här under är de olika valen man kan välja mellan -->
-                                <option>Ja</option>
-                                <option>Om man har mycket plats att jobba på</option>
-                                <option>Om man har mycket pengar</option>
-                                <option>Om man har en verkstad</option>
-                                <option>Nej</option>
+                            <label for="förastabil">Är din bil en bra förstabil</label>
+                            <select size="1" name="Förstabil" id="förastabil"> <!-- här är en dropdown meny och här under är de olika valen man kan välja mellan -->
+                                <option value="1">Ja</option>
+                                <option value="2">Om man har mycket plats att jobba på</option>
+                                <option value="3">Om man har mycket pengar</option>
+                                <option value="4">Om man har en verkstad</option>
+                                <option value="5">Nej</option>
                             </select>
                         </section>
                         <!-- ________________________________________________________________ -->

@@ -51,6 +51,10 @@ ol {                            /* skapa en border på en lista (runda hörn) */
     border-radius: 5px;
 }
 
+header a {                      /* här har jag en avkomlingsselektor för att göra mina länkar på i den globala menyn lite större */
+    font-size: 1.1em;
+}
+
 a:link {                        /* Länk färg */
     color:rgb(18, 192, 146);
 }
@@ -82,13 +86,11 @@ p , label {                     /* här byter jag färg på texten*/
     color:rgb(192, 146, 18);
 }
 
-table p {                       /* här använder jag en avkomling selector för att det var ett ställe där det passade in */
-    color:rgb(192, 146, 18);  /* Jag byter färg på alla p innuti en tabell och centrerar dem */
-    text-align: center;         /* Här centrerar jag texten i den platsen som texten får ta upp */
-}
-
-tr > td  {                      /* här använder jag en barn selector för att det var ett ställe där jag enkelt kunde andvända det */
-    text-align: center;         
+tr > td,tr > th {                      /* här använder jag en barn selector för att det var ett ställe där jag enkelt kunde andvända det */
+    text-align: center;  
+    color:rgb(192, 146, 18);
+    padding-top: 16px;
+    padding-bottom: 16px;     
 }
 
 footer > p {
@@ -164,7 +166,7 @@ footer > p {
     font-size: 40px;
 }
 
-.GruppABrad1{                   /* här har jag gridden för rad 1 av sidan som borde ha varit högre upp */
+main.GruppAB section:nth-child(1) {                   /* här har jag gridden för rad 1 av sidan som borde ha varit högre upp */
     grid-area: GruppABrad1;
     display: grid;
     grid-template-areas:
