@@ -9,9 +9,9 @@
         <link href="../CSS/style.css" rel="stylesheet">     
     </head>                                           
     <body>                                           
-        <div class ="page5">                       
+        <div class ="pagestil5 baspage">                       
             <header>                                    
-                <h1 class="Titel">
+                <h1>
                     Formulär
                 </h1>
                 <nav>                                         
@@ -25,21 +25,21 @@
                     </ul>                                       
                 </nav>             
             </header>                                    
-            <main class="mainFormulär">
-                <form action="../index.html" method="POST" class="Formulär">     <!-- Jag skapar mitt formulär och använder GET eftersom att jag inte har någon stans att skicka svaren så alltså är det bara GET som fungerar -->
-                    <section class="Formrad1">
+            <main id="mainFormulär">
+                <form action="../index.html" method="POST">     <!-- Jag skapar mitt formulär och använder GET eftersom att jag inte har någon stans att skicka svaren så alltså är det bara GET som fungerar -->
+                    <section>
                         <!--Password-->
                         <!-- ________________________________________________________________ -->
                     
-                        <section class="Password">                              <!-- här får användaren skriva in sitt password  -->
-                            <label for="p1">Lösenord</label>                    <!-- här är min label för lösenordet som är texten bredvid -->
+                        <section class="formulärfrågor">                              <!-- här får användaren skriva in sitt password  -->
+                            <label for="p1">Lösenord:</label>                    <!-- här är min label för lösenordet som är texten bredvid -->
                             <input type="password" name="password" id="p1">     <!-- här bestämmer jag att den ska vara typen password och ha id=p1 -->
                         </section>
                     
                         <!--Radioknappar-->
                         <!-- ________________________________________________________________ -->
 
-                        <section class="Radio1">                                <!-- här är sektionen för mina radioknappar -->
+                        <section class="formulärfrågor">                                <!-- här är sektionen för mina radioknappar -->
                             <p>Har du körkort?</p>                              <!-- här är frågan till radiknappen -->
                             <input type="radio" id="a1" name="Körkort" value="1" checked="checked">
                             <label for="a1">Jag har körkort</label>             <!-- här har jag en label för den som id=a1 och raden över bestämmer id/name/value och alla sådana saker -->
@@ -52,7 +52,7 @@
                         </section>
                         
                         <!-- ________________________________________________________________ -->
-                        <section class="Radio2">
+                        <section class="formulärfrågor">
                             <p>Har du bil?</p>
                             <input type="radio" id="b1" name="Bil" value="1" checked="checked">
                             <label for="b1">Jag har bil</label>
@@ -66,31 +66,31 @@
                     </section>
                         <!--Textrutor-->
                         <!-- ________________________________________________________________ -->
-                    <section class="Formrad2">
-                        <section class="textruta1">
+                    <section>
+                        <section class="formulärfrågor">
                             <label for="t1">Vilket märke är din bil:</label>
                             <input type="text" name="bilmärke" id="t1">                 <!-- här väljer jag att det ska vara en textruta med namnet bilmärke -->
                         </section>
                         <!-- ________________________________________________________________ -->
-                        <section class="textruta2">
+                        <section class="formulärfrågor">
                             <label for="t2">Vilken modell är din bil:</label>
                             <input type="text" name="bilmodell" id="t2">
                         </section>
                         <!-- ________________________________________________________________ -->
-                        <section class="textruta3">
+                        <section class="formulärfrågor">
                             <label for="t3">Vilket år är din bil från:</label>
                             <input type="text" name="modellår" id="t3">
                         </section>
                         <!-- ________________________________________________________________ -->
-                        <section class="textruta4">
-                            <label for="k1">Kommentar</label>
+                        <section class="formulärfrågor">
+                            <label for="k1">Kommentar:</label>
                             <textarea name="kommentar" id="k1"></textarea>
                         </section>
                     </section>
                         <!--Checkboxar-->
                         <!-- ________________________________________________________________ -->
-                    <section class="Formrad3">                                  <!-- Här är första sektionen med checkboxar -->
-                        <section class="checkbox1">
+                    <section>                                  <!-- Här är första sektionen med checkboxar -->
+                        <section class="formulärfrågor">
                             <p>Byter du motorolja i din egna bil?</p>
                             <input type="checkbox" id="ch_a1"
                             name="Motorolja" 
@@ -103,7 +103,7 @@
                             <label for="ch_a2">Nej</label>
                         </section>
                         <!-- ________________________________________________________________ -->
-                        <section class="checkbox2">
+                        <section class="formulärfrågor">
                             <p>Byter du någon av de andra vätskorna i din bil själv?</p>
                             <input type="checkbox" id="ch_b1"
                             name="Vätskor"
@@ -127,8 +127,8 @@
                         </section>
                     </section>
                         <!-- ________________________________________________________________ -->
-                    <section class="Formrad4">                                  <!-- här är sektionen för del 4 i formuläret (innehåller drop down och submit) -->
-                        <section class="Dropdownfråga">
+                    <section>                                  <!-- här är sektionen för del 4 i formuläret (innehåller drop down och submit) -->
+                        <section class="formulärfrågor">
                             <label for="förastabil">Är din bil en bra förstabil</label>
                             <select size="1" name="Förstabil" id="förastabil"> <!-- här är en dropdown meny och här under är de olika valen man kan välja mellan -->
                                 <option value="1">Ja</option>
@@ -139,7 +139,7 @@
                             </select>
                         </section>
                         <!-- ________________________________________________________________ -->
-                        <section class="Submit">                                <!-- här har jag en section för bara submit knappen för att lägga den i en grid i css -->
+                        <section class="formulärfrågor">                                <!-- här har jag en section för bara submit knappen för att lägga den i en grid i css -->
                             <p>
                                 <input type="submit" value="skicka">
                             </p>

@@ -4,11 +4,18 @@ body {                          /* bestämmer bakgrundsfärgen på sidan och hur
     height: 100vh;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }               /* ^^ vilken font som ska användas ^^ */
-.page {                         /* alla sidor har olika varianter av denna gridden som ser lika dana ut men med olika main */
+
+.baspage {
     margin: auto;
+    width: 96vw;
+    min-height: 96vh;
+    background-color:rgb(65,65,65);
+    color: rgb(192, 146, 18);
+}
+
+.pagestil1 {                         /* alla sidor har olika varianter av denna gridden som ser lika dana ut men med olika main */
     display: grid;
-    width: 96%;
-    height: 96%;
+    
     grid-template-areas:
       "head"
       "main"
@@ -23,18 +30,15 @@ header {                        /* En grid i header med vart nav och Titel ska l
     "Titel"
     "nav";
     grid-template-rows: 70px 70px;
-    background-color:rgb(65,65,65);
 }
 
-.Titel {                        /* bestämmer hur min titel ska finnas i en grid och hur den ska se ut */
+h1 {                        /* bestämmer hur min titel ska finnas i en grid och hur den ska se ut */
     grid-area: Titel;
-    color: rgb(192, 146, 18);
     text-align: center;
 }
   
 nav {                           /* berättar vad min nav ska heta i en grid*/
     grid-area: nav;
-    background-color: rgb(65,65,65);
 }
 
 ul {
@@ -61,7 +65,10 @@ a:link {                        /* Länk färg */
 a:visited {                     /* länken byter färg när man har varit inne på den men jag byter till samma färg eftersom att den färgen är bra*/
     color:rgb(18, 192, 146);
 }
-a:hover, a:focus {              /* länken byter färg om jag håller över den eller focusar på den */
+a:focus {              /* länken byter färg om jag har den i fokus */
+    color:rgb(182,200,250);
+}
+a:hover {              /* länken byter färg om jag håller över den */
     color:rgb(182,200,250);
 }
 a:active {                      /* när länken är aktiv(man håller nere musen på den) såbyter den till lila */
@@ -72,23 +79,17 @@ tr:nth-child(even) {            /* för att skapa zebra striping */
     background-color: rgb(90,90,90);
 }
 
-main {                          /* här väljer jag bakgrundsfärg och vad min main ska heta i en grid */
+main {                          
     grid-area: main;            
-    background-color: rgb(65,65,65);
 }
   
-footer {                        /* här sätter jag bakgrundsfärg och namn i grid till min footer */
-    grid-area: foot;
-    background-color: rgb(65,65,65);
-}
-
-p , label {                     /* här byter jag färg på texten*/
-    color:rgb(192, 146, 18);
+footer {                        
+    grid-area: foot;    
 }
 
 tr > td,tr > th {                      /* här använder jag en barn selector för att det var ett ställe där jag enkelt kunde andvända det */
+    border: 1px solid black;
     text-align: center;  
-    color:rgb(192, 146, 18);
     padding-top: 16px;
     padding-bottom: 16px;     
 }
@@ -98,20 +99,48 @@ footer > p {
     font-size: 1em;             /* här använder ja 1em eftersom att det inte kommer göra någon skillnad på hur stor texten är */
 }                               /* 1em gör att texten tar upp 1x så mycket plats som den ska vilket är samma om jag hade använt 2em hade den vart dubbelt så stor */
 
-.sida1table, th, td {           /* här skapar jag border och bestämmer hur tabellen ska se ut */
-    border: 1px solid black;  /* här skapar jag en svart border med 1px brädd */
-    border-collapse: collapse;
+.sida1table {           /* här skapar jag border och bestämmer hur tabellen ska se ut */
     width:60%;                  /* den tar upp 60% av platsen den hade tagit upp annarsS */
     grid-area: tabell;
+}
+
+.vanligTabell {
     margin-left: auto;
     margin-right: auto;
+    border-collapse: collapse;
+    border: 1px solid black;  /* här skapar jag en svart border med 1px brädd */
 }
-/*Grupp A + B --------------------------------------------------------*/
-.page2 {                        /* här är min grid layout till sidan för grupp A och B den är baserad på första gridden som alla andra*/
+
+.vanligText {
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.vanligTitel {
     margin: auto;
+    font-size: 40px;
+}
+
+.underText {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.litenbild {
+    width: 30vw;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.storbild {
+    width: 50vw;
+}
+
+/*Grupp A + B --------------------------------------------------------*/
+.pagestil2 {                        /* här är min grid layout till sidan för grupp A och B den är baserad på första gridden som alla andra*/
     display: grid;
-    width: 96%;
-    height: 96%;
     grid-template-areas:
       "head"
       "mainAB"
@@ -121,52 +150,33 @@ footer > p {
                                 /* CSS på denna sidan är ganska blandad så därför ligger inte de andra grids precis under */
 .GruppABBild1{                  /* Här har jag storlek och margin på bild1 */
     grid-area: GruppABBild1;
-    width: 30vw;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .GruppABBild2{                  /* Här har jag storlek och margin på bild2 */
     grid-area: GruppABBild2;
-    width: 30vw;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .GruppABBild3{                  /* Här har jag bara storlek på bilden eftersomm att den är under de andra och ska vara en annan storlek */
     grid-area: GruppABBild3;
-    width: 50vw;
 }
 
 .Lorem_ipsum1{                  /* här har jag stylen för texten på sidan */
     grid-area: Lorem_ipsum1;
-    text-align: left;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .Lorem_ipsum2{                  /* här har jag style för den andra texten på sidan som ska vara bredvid bild2 */
     grid-area: Lorem_ipsum2;
-    text-align: left;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .titel1{                        /* här har jag stylen för titel1 som ska vara bredvid bild1 */
     grid-area: titel1;
-    color:rgb(192, 146, 18);
-    margin: auto;
-    font-size: 40px;
 }
 
 .titel2{                        /* här har jag stylen för titel2 */
     grid-area: titel2;
-    color:rgb(192, 146, 18);
-    margin: auto;
-    font-size: 40px;
 }
 
-main.GruppAB section:nth-child(1) {                   /* här har jag gridden för rad 1 av sidan som borde ha varit högre upp */
+.GruppAB > section:nth-child(1) {                   /* här har jag gridden för rad 1 av sidan som borde ha varit högre upp */
     grid-area: GruppABrad1;
     display: grid;
     grid-template-areas:
@@ -176,7 +186,7 @@ main.GruppAB section:nth-child(1) {                   /* här har jag gridden f�
     grid-template-rows: 60px 1fr;
 }
 
-.GruppABrad2{                   /* denna har bilden på andra sidan och den borde också ha varit högre upp */
+.GruppAB > section:nth-child(2){                   /* denna har bilden på andra sidan och den borde också ha varit högre upp */
     grid-area: GruppABrad2;
     display: grid;
     grid-template-areas:
@@ -186,7 +196,7 @@ main.GruppAB section:nth-child(1) {                   /* här har jag gridden f�
     grid-template-rows: 60px 1fr;
 }
 
-.GruppABrad3{                   /* Här är för rad3 som är mycket mer simpel eftersom att den bara innehåller en figure */
+.GruppAB > section:nth-child(3){                   /* Här är för rad3 som är mycket mer simpel eftersom att den bara innehåller en figure */
     grid-area: GruppABrad3;
     margin: auto;
 }
@@ -200,23 +210,17 @@ main.GruppAB section:nth-child(1) {                   /* här har jag gridden f�
     "GruppABrad2"
     "GruppABrad3";
     grid-template-rows: auto auto auto;
-    background-color: rgb(65,65,65);
 }
 
 figcaption{                     /* här är style för figcaption för bilden och texten längst ner på sidan */
-    background-color: rgb(65,65,65);
-    color:rgb(192, 146, 18);
     text-align: center;
     font-size: 40px;
 }
 
 /* Grupp1 -------------------------------------------------*/
                                 /* Mycket mer organiserad kod på denna biden */
-.page3 {                        /* Grid för Grupp1 */
-    margin: auto;
+.pagestil3 {                        /* Grid för Grupp1 */
     display: grid;
-    width: 96%;
-    height: 96%;
     grid-template-areas:
       "head"
       "main1"
@@ -233,10 +237,9 @@ figcaption{                     /* här är style för figcaption för bilden oc
     "."
     "Grupp1rad2";
     grid-template-rows: auto 20px auto;
-    background-color: rgb(65,65,65);
 }
 
-.Grupp1rad1{                    /* style för rad 1 */
+#Grupp1 > section:nth-child(1){                    /* style för rad 1 */
     grid-area: Grupp1rad1;
     display: grid;
     grid-template-areas:
@@ -244,7 +247,7 @@ figcaption{                     /* här är style för figcaption för bilden oc
     grid-template-columns: 1fr 2fr;
 }
 
-.Grupp1rad2{                    /* style för rad 2 där det finns en tabell och en lista */
+#Grupp1 > section:nth-child(2){                    /* style för rad 2 där det finns en tabell och en lista */
     grid-area: Grupp1rad2;
     display: grid;
     grid-template-areas:
@@ -254,36 +257,29 @@ figcaption{                     /* här är style för figcaption för bilden oc
 }
 
 
-#Grupp1Tabell, th, td {         /* style för tabellen som ha id=Grupp1Tabell. Denna inehåller border och färger och andra saker */
-    border: 1px solid black;
-    border-collapse: collapse;
+#Grupp1Tabell {         /* style för tabellen som ha id=Grupp1Tabell. Denna inehåller border och färger och andra saker */
     width: 80vw;
     grid-area: Grupp1Tabell;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .KadettGrupp1{                  /* kadett grupp1 style */
     grid-area: KadettGrupp1;
-    width: 30vw;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
-.märken{                        /* style för lista med som har en border */
+#märken{                        /* style för lista med som har en border */
     grid-area: märken;
     margin-left: auto;
     margin-right: auto;
-    color: rgb(192, 146, 18);
+}
+
+.Lorem_ipsum {
+    grid-area: Lorem_ipsum;
 }
 
 /* WRC ----------------------------------------------------*/
 
-.page4 {                        /* Style för WRC sidan(grid design 4) */
-    margin: auto;
+.pagestil4 {                        /* Style för WRC sidan(grid design 4) */
     display: grid;
-    width: 96%;
-    height: 96%;
     grid-template-areas:
       "head"
       "mainWRC"
@@ -301,10 +297,9 @@ figcaption{                     /* här är style för figcaption för bilden oc
     "WRCrad3 WRCrad3 WRCrad3";
     grid-template-rows: auto 20px auto;
     grid-template-columns: 1fr 50px 1fr;
-    background-color: rgb(65,65,65);
 }
 
-.WRCrad1{                       /* rad 1 grid med bild och text under*/
+#GruppWRC > section:nth-child(1){                       /* rad 1 grid med bild och text under*/
     grid-area: WRCrad1;
     display: grid;
     grid-template-areas:
@@ -313,7 +308,7 @@ figcaption{                     /* här är style för figcaption för bilden oc
     grid-template-rows: 1fr auto;
 }
 
-.WRCrad2{                       /* rad 2 text som hamnar bredvid rad1 den har också bild och text */
+#GruppWRC > section:nth-child(2){                       /* rad 2 text som hamnar bredvid rad1 den har också bild och text */
     grid-area: WRCrad2;
     display: grid;
     grid-template-areas:
@@ -322,7 +317,7 @@ figcaption{                     /* här är style för figcaption för bilden oc
     grid-template-rows: 1fr auto;
 }
 
-.WRCrad3{                       /* Grid för rad 3 för att få ett 2 spalt layout eftersom att jag inte vet vad de andra sidorna räknas som */
+#GruppWRC > section:nth-child(3){                       /* Grid för rad 3 för att få ett 2 spalt layout eftersom att jag inte vet vad de andra sidorna räknas som */
     grid-area: WRCrad3;
     display: grid;
     grid-template-areas: 
@@ -330,39 +325,30 @@ figcaption{                     /* här är style för figcaption för bilden oc
     grid-template-columns: auto 20px auto;
 }
 
-.RepsolWRC{                     /* Bild på WRC bil */
-    grid-area: RepsolWRC;
-    height: 60vh;               /* den har en höjd på 60 view height */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.StratosWRC{                    /* en till bild på en Lancia stratos */
-    grid-area: StratosWRC;
+.WRCbilder {
     height: 60vh;
     margin-left: auto;
     margin-right: auto;
 }
 
+.RepsolWRC{                     /* Bild på WRC bil */
+    grid-area: RepsolWRC;
+}
+
+.StratosWRC{                    /* en till bild på en Lancia stratos */
+    grid-area: StratosWRC;
+}
+
 .Lorem_ipsum1WRC{               /* Text */
     grid-area: Lorem_ipsum1WRC;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .Lorem_ipsum2WRC{               /* Text */
     grid-area: Lorem_ipsum2WRC;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .Lorem_ipsum3WRC{               /* Lorem Ipsum */
     grid-area: Lorem_ipsum3WRC;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .rallyvideo{                    /* Rally video */
@@ -372,11 +358,8 @@ figcaption{                     /* här är style för figcaption för bilden oc
 
 /*---Formulär----------------------------------------------------------------*/
 
-.page5 {                        /* Style för formulärsidan(design 5) */
-    margin: auto;
+.pagestil5 {                        /* Style för formulärsidan(design 5) */
     display: grid;
-    width: 96%;
-    height: 96%;
     grid-template-areas:
       "head"
       "mainFormulär"
@@ -384,114 +367,16 @@ figcaption{                     /* här är style för figcaption för bilden oc
     grid-template-rows: 140px 1fr 50px;
 }
 
-.mainFormulär{                  /* Main för formulär sidan */
+#mainFormulär{                  /* Main för formulär sidan */
     grid-area: mainFormulär;
     height: auto;
-    display: grid;
-    grid-template-areas:
-    "Formulär";
-    grid-template-rows: auto;
-    background-color: rgb(65,65,65);
 }
-
-.Formulär{                      /* Formulärets grid */
-    grid-area: Formulär;
-    height: auto;
-    display: grid;
-    grid-template-areas:
-    " Formrad1 "
-    " . " 
-    " Formrad2 "
-    " . "
-    " Formrad3 "
-    " . "
-    " Formrad4 ";
-    grid-template-rows: auto 20px auto 20px auto 20px auto;
-    background-color: rgb(65,65,65);
-}
-
-
-.Formrad1{                      /* grid som innehåller Password och alla radioknappar */
-    grid-area: Formrad1;
-    display: grid;
-    grid-template-areas:
-    " Password "
-    " Radio1 "
-    " Radio2";
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
-.Formrad2{                      /* grid som innehåller alla textrutor och en textarea som jag döpte till textruta4 */
-    grid-area: Formrad2;
-    display: grid;
-    grid-template-areas:
-    " textruta1 "
-    " textruta2 "
-    " textruta3 "
-    " textruta4 ";
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-
-.Formrad3{                      /* rad 3 som innehåller checkboxar */
-    grid-area: Formrad3;
-    display: grid;
-    grid-template-areas:
-    " checkbox1 "
-    " checkbox2 ";
-    grid-template-rows: 1fr 1fr;
-}
-
-.Formrad4{                      /* rad 4 innehåller en dropdown fråga och en submit knapp */
-    grid-area: Formrad4;
-    display: grid;
-    grid-template-areas:
-    " Dropdownfråga "
-    " Submit ";
-    grid-template-rows: 1fr 1fr;
-}
-                                /* här under är det bara margin och grid-area på de olika frågorna i formuläret */
+                                /* här sätter jag margin, block och align på alla frågor och submit knappen i formuläret */
 /*________________________________________*/
-.Password{
-    grid-area:Password;
+
+.formulärfrågor {
     margin: auto;
-}
-.Radio1{
-    grid-area:Radio1;
-    margin: auto;
-}
-.Radio2{
-    grid-area:Radio2;
-    margin: auto;
-}
-.textruta1{
-    grid-area:textruta1;
-    margin: auto;
-}
-.textruta2{
-    grid-area:textruta2;
-    margin: auto;
-}
-.textruta3{
-    grid-area:textruta3;
-    margin: auto;
-}
-.textruta4{
-    grid-area:textruta4;
-    margin: auto;
-}
-.checkbox1{
-    grid-area:checkbox1;
-    margin: auto;
-}
-.checkbox2{
-    grid-area:checkbox2;
-    margin: auto;
-}
-.Dropdownfråga{
-    grid-area:Dropdownfråga;
-    margin: auto;
-}
-.Submit{
-    grid-area:Submit;
-    margin: auto;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
 }
