@@ -3,9 +3,9 @@ body {                          /* bestämmer bakgrundsfärgen på sidan och hur
     margin: 0;
     height: 100vh;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}               /* ^^ vilken font som ska användas ^^ */
+} /* ^^ vilken font som ska användas till all text som finns i body vilket betyder all text på sidan^^ */
 
-.baspage {
+.baspage {                      /* Här är grundstylen för alla sidor eftersom att alla div som håller ihop layouten av sidan har denna klassen */
     margin: auto;
     width: 96vw;
     min-height: 96vh;
@@ -13,7 +13,7 @@ body {                          /* bestämmer bakgrundsfärgen på sidan och hur
     color: rgb(192, 146, 18);
 }
 
-.pagestil1 {                         /* alla sidor har olika varianter av denna gridden som ser lika dana ut men med olika main */
+.pagestil1 {                    /* alla sidor har olika varianter av denna gridden som ser lika dana ut men med olika main */
     display: grid;
     
     grid-template-areas:
@@ -111,30 +111,30 @@ footer > p {
     border: 1px solid black;  /* här skapar jag en svart border med 1px brädd */
 }
 
-.vanligText {
+.vanligText {                   /* style som ska sitta på den vanliga texten på de flästa sidorna */
     text-align: left;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.vanligTitel {
+.vanligTitel {                  /* titlar som ska vara på några av sidorna */
     margin: auto;
     font-size: 40px;
 }
 
-.underText {
+.underText {                    /* Här stylear jag undertexter och texten bredvid bilden på WRC sidan eftersom att de skulle vara centrerade till skillnad från den vanliga texten */
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.litenbild {
+.litenbild {                    /* här har jag style för den vanligaste bildstorleken på min sida */
     width: 30vw;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.storbild {
+.storbild {                     /* här är style för en lite större bild som jag har på 2 av mina sidor */
     width: 50vw;
 }
 
@@ -175,7 +175,7 @@ footer > p {
 .titel2{                        /* här har jag stylen för titel2 */
     grid-area: titel2;
 }
-
+                                                    /* Här väljer första section som ligger i elementet med GruppAB klassen */
 .GruppAB > section:nth-child(1) {                   /* här har jag gridden för rad 1 av sidan som borde ha varit högre upp */
     grid-area: GruppABrad1;
     display: grid;
@@ -185,8 +185,8 @@ footer > p {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 60px 1fr;
 }
-
-.GruppAB > section:nth-child(2){                   /* denna har bilden på andra sidan och den borde också ha varit högre upp */
+                                                    /* här gör jag samma sak som i den förra fast jag väljer den andra */
+.GruppAB > section:nth-child(2){                    /* denna har bilden på andra sidan och den borde också ha varit högre upp */
     grid-area: GruppABrad2;
     display: grid;
     grid-template-areas:
@@ -287,7 +287,7 @@ figcaption{                     /* här är style för figcaption för bilden oc
     grid-template-rows: 140px 1fr 50px;
 }
 
-#GruppWRC{                      /* main grid i WRC sidan. är 3 rader bred med ett mellanrumm mellan de olika raderna */
+#GruppWRC{                      /* grid för sidan GruppWRC som här innehåller allting för att jag skulle få mindre klasser på sidan. den är 4 rows och 3 columns med columns för att sätta mellanrummet mellan olika saker */
     grid-area: mainWRC;
     height: auto;
     display: grid;
@@ -300,7 +300,7 @@ figcaption{                     /* här är style för figcaption för bilden oc
     grid-template-columns: 1fr 50px 1fr;
 }
 
-.WRCbilder {
+.WRCbilder {                    /* bilderna på WRC sidan har en annan storlek än de på de andra sidorna så därför skapade jag en klass för bara dem bilderna */
     height: 60vh;
     margin-left: auto;
     margin-right: auto;
@@ -349,7 +349,7 @@ figcaption{                     /* här är style för figcaption för bilden oc
                                 /* här sätter jag margin, block och align på alla frågor och submit knappen i formuläret */
 /*________________________________________*/
 
-.formulärfrågor {
+.formulärfrågor {               /* stylen för alla frågorna i formuläret. Den ger dem margin och andra saker */
     margin: auto;
     text-align: center;
     display: block;

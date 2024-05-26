@@ -27,123 +27,126 @@
             </header>                                    
             <main id="mainFormulär">
                 <form action="../index.html" method="POST">     <!-- Jag skapar mitt formulär och använder GET eftersom att jag inte har någon stans att skicka svaren så alltså är det bara GET som fungerar -->
-                    <section>
-                        <!--Password-->
-                        <!-- ________________________________________________________________ -->
-                    
-                        <section class="formulärfrågor">                              <!-- här får användaren skriva in sitt password  -->
-                            <label for="p1">Lösenord:</label>                    <!-- här är min label för lösenordet som är texten bredvid -->
-                            <input type="password" name="password" id="p1">     <!-- här bestämmer jag att den ska vara typen password och ha id=p1 -->
-                        </section>
-                    
-                        <!--Radioknappar-->
-                        <!-- ________________________________________________________________ -->
+                
 
-                        <section class="formulärfrågor">                                <!-- här är sektionen för mina radioknappar -->
-                            <p>Har du körkort?</p>                              <!-- här är frågan till radiknappen -->
-                            <input type="radio" id="a1" name="Körkort" value="1" checked="checked">
-                            <label for="a1">Jag har körkort</label>             <!-- här har jag en label för den som id=a1 och raden över bestämmer id/name/value och alla sådana saker -->
-                        
-                            <input type="radio" id="a2" name="Körkort" value="2">
-                            <label for="a2">Jag håller på att skaffa körkort</label>
-                        
-                            <input type="radio" id="a3" name="Körkort" value="3">
-                            <label for="a3">Jag har inte körkort</label>
-                        </section>
-                        
-                        <!-- ________________________________________________________________ -->
-                        <section class="formulärfrågor">
-                            <p>Har du bil?</p>
-                            <input type="radio" id="b1" name="Bil" value="1" checked="checked">
-                            <label for="b1">Jag har bil</label>
-                            
-                            <input type="radio" id="b2" name="Bil" value="2">
-                            <label for="b2">Jag håller på att skaffa bil</label>
-                            
-                            <input type="radio" id="b3" name="Bil" value="3">
-                            <label for="b3">Jag har inte bil</label>
-                        </section>
+                    <!--Password-->
+                    <!-- ________________________________________________________________ -->
+                    <section class="formulärfrågor">                        <!-- här får användaren skriva in sitt password  -->
+                        <label for="p1">Lösenord:</label>                   <!-- här är min label för lösenordet som är texten bredvid -->
+                        <input type="password" name="password" id="p1">     <!-- här bestämmer jag att den ska vara typen password och ha id=p1 -->
                     </section>
-                        <!--Textrutor-->
-                        <!-- ________________________________________________________________ -->
-                    <section>
-                        <section class="formulärfrågor">
-                            <label for="t1">Vilket märke är din bil:</label>
-                            <input type="text" name="bilmärke" id="t1">                 <!-- här väljer jag att det ska vara en textruta med namnet bilmärke -->
-                        </section>
-                        <!-- ________________________________________________________________ -->
-                        <section class="formulärfrågor">
-                            <label for="t2">Vilken modell är din bil:</label>
-                            <input type="text" name="bilmodell" id="t2">
-                        </section>
-                        <!-- ________________________________________________________________ -->
-                        <section class="formulärfrågor">
-                            <label for="t3">Vilket år är din bil från:</label>
-                            <input type="text" name="modellår" id="t3">
-                        </section>
-                        <!-- ________________________________________________________________ -->
-                        <section class="formulärfrågor">
-                            <label for="k1">Kommentar:</label>
-                            <textarea name="kommentar" id="k1"></textarea>
-                        </section>
+                    
+
+                    <!--Radioknappar-->
+                    <!-- ________________________________________________________________ -->
+                    <section class="formulärfrågor">                        <!-- här är sektionen för mina radioknappar -->
+                        <p>Har du körkort?</p>                              <!-- här är frågan till radiknappen -->
+                        <input type="radio" id="a1" name="Körkort" value="1" checked="checked"> <!-- med input så bestämmer man vilken typ det ska vara och här har jag valt Radio sedan ger man dem ett id, namn, value och med checked så bestämmer jag att den ska vara förvald. -->
+                        <label for="a1">Jag har körkort</label>             <!-- här har jag en label för den som id=a1 och raden över bestämmer id/name/value och alla sådana saker -->
+                    
+                        <input type="radio" id="a2" name="Körkort" value="2">
+                        <label for="a2">Jag håller på att skaffa körkort</label>
+                    
+                        <input type="radio" id="a3" name="Körkort" value="3">
+                        <label for="a3">Jag har inte körkort</label>
                     </section>
-                        <!--Checkboxar-->
-                        <!-- ________________________________________________________________ -->
-                    <section>                                  <!-- Här är första sektionen med checkboxar -->
-                        <section class="formulärfrågor">
-                            <p>Byter du motorolja i din egna bil?</p>
-                            <input type="checkbox" id="ch_a1"
-                            name="Motorolja" 
-                            value="1">
-                            <label for="ch_a1">Ja</label>
+                    <!-- ________________________________________________________________ -->
+                    <section class="formulärfrågor">
+                        <p>Har du bil?</p>
+                        <input type="radio" id="b1" name="Bil" value="1" checked="checked">
+                        <label for="b1">Jag har bil</label>
                         
-                            <input type="checkbox" id="ch_a2"
-                            name="Motorolja"
-                            value="2">
-                            <label for="ch_a2">Nej</label>
-                        </section>
-                        <!-- ________________________________________________________________ -->
-                        <section class="formulärfrågor">
-                            <p>Byter du någon av de andra vätskorna i din bil själv?</p>
-                            <input type="checkbox" id="ch_b1"
-                            name="Vätskor"
-                            value="1">
-                            <label for="ch_b1">Alla</label>
+                        <input type="radio" id="b2" name="Bil" value="2">
+                        <label for="b2">Jag håller på att skaffa bil</label>
                         
-                            <input type="checkbox" id="ch_b2"
-                            name="Vätskor"
-                            value="2">
-                            <label for="ch_b2">Många av dem</label>
-                        
-                            <input type="checkbox" id="ch_b3"
-                            name="Vätskor"
-                            value="3">
-                            <label for="ch_b3">Några av dem</label>
-                        
-                            <input type="checkbox" id="ch_b4"
-                            name="Vätskor"
-                            value="4">
-                            <label for="ch_b4">Inga</label>
-                        </section>
+                        <input type="radio" id="b3" name="Bil" value="3">
+                        <label for="b3">Jag har inte bil</label>
                     </section>
-                        <!-- ________________________________________________________________ -->
-                    <section>                                  <!-- här är sektionen för del 4 i formuläret (innehåller drop down och submit) -->
-                        <section class="formulärfrågor">
-                            <label for="förastabil">Är din bil en bra förstabil</label>
-                            <select size="1" name="Förstabil" id="förastabil"> <!-- här är en dropdown meny och här under är de olika valen man kan välja mellan -->
-                                <option value="1">Ja</option>
-                                <option value="2">Om man har mycket plats att jobba på</option>
-                                <option value="3">Om man har mycket pengar</option>
-                                <option value="4">Om man har en verkstad</option>
-                                <option value="5">Nej</option>
-                            </select>
-                        </section>
-                        <!-- ________________________________________________________________ -->
-                        <section class="formulärfrågor">                                <!-- här har jag en section för bara submit knappen för att lägga den i en grid i css -->
-                            <p>
-                                <input type="submit" value="skicka">
-                            </p>
-                        </section>
+                    
+
+                    <!--Textrutor-->
+                    <!-- ________________________________________________________________ -->
+                    <section class="formulärfrågor">
+                        <label for="t1">Vilket märke är din bil:</label>
+                        <input type="text" name="bilmärke" id="t1">                 <!-- här väljer jag att det ska vara en textruta med namnet bilmärke -->
+                    </section>
+                    <!-- ________________________________________________________________ -->
+                    <section class="formulärfrågor">
+                        <label for="t2">Vilken modell är din bil:</label>
+                        <input type="text" name="bilmodell" id="t2">
+                    </section>
+                    <!-- ________________________________________________________________ -->
+                    <section class="formulärfrågor">
+                        <label for="t3">Vilket år är din bil från:</label>
+                        <input type="text" name="modellår" id="t3">
+                    </section>
+                    <!-- ________________________________________________________________ -->
+                    <section class="formulärfrågor">
+                        <label for="k1">Kommentar:</label>
+                        <textarea name="kommentar" id="k1"></textarea>
+                    </section>
+                    
+
+                    <!--Checkboxar-->
+                    <!-- ________________________________________________________________ -->
+                                                    <!-- Här är första sektionen med checkboxar -->
+                    <section class="formulärfrågor">
+                        <p>Byter du motorolja i din egna bil?</p>
+                        <input type="checkbox" id="ch_a1"
+                        name="Motorolja" 
+                        value="1">
+                        <label for="ch_a1">Ja</label>
+                    
+                        <input type="checkbox" id="ch_a2"
+                        name="Motorolja"
+                        value="2">
+                        <label for="ch_a2">Nej</label>
+                    </section>
+                    <!-- ________________________________________________________________ -->
+                    <section class="formulärfrågor">
+                        <p>Byter du någon av de andra vätskorna i din bil själv?</p>
+                        <input type="checkbox" id="ch_b1"
+                        name="Vätskor"
+                        value="1">
+                        <label for="ch_b1">Alla</label>
+                    
+                        <input type="checkbox" id="ch_b2"
+                        name="Vätskor"
+                        value="2">
+                        <label for="ch_b2">Många av dem</label>
+                    
+                        <input type="checkbox" id="ch_b3"
+                        name="Vätskor"
+                        value="3">
+                        <label for="ch_b3">Några av dem</label>
+                    
+                        <input type="checkbox" id="ch_b4"
+                        name="Vätskor"
+                        value="4">
+                        <label for="ch_b4">Inga</label>
+                    </section>
+
+
+                    <!--Dropdownfråga-->
+                    <!-- ________________________________________________________________ -->
+                    <section class="formulärfrågor">
+                        <label for="förastabil">Är din bil en bra förstabil</label>
+                        <select size="1" name="Förstabil" id="förastabil"> <!-- här är en dropdown meny och här under är de olika valen man kan välja mellan -->
+                            <option value="1">Ja</option>       <!-- option används för att lägga till ett valalternativ -->
+                            <option value="2">Om man har mycket plats att jobba på</option>
+                            <option value="3">Om man har mycket pengar</option>
+                            <option value="4">Om man har en verkstad</option>
+                            <option value="5">Nej</option>
+                        </select>
+                    </section>
+
+
+                    <!--Submit-->
+                    <!-- ________________________________________________________________ -->
+                    <section class="formulärfrågor">                                <!-- här har jag en section för bara submit knappen för att lägga den i en grid i css -->
+                        <p>
+                            <input type="submit" value="skicka">
+                        </p>
                     </section>
                 </form>
             </main>
