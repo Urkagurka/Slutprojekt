@@ -99,7 +99,7 @@ footer > p {
     font-size: 1em;             /* här använder ja 1em eftersom att det inte kommer göra någon skillnad på hur stor texten är */
 }                               /* 1em gör att texten tar upp 1x så mycket plats som den ska vilket är samma om jag hade använt 2em hade den vart dubbelt så stor */
 
-.sida1table {           /* här skapar jag border och bestämmer hur tabellen ska se ut */
+#sida1table {           /* här skapar jag border och bestämmer hur tabellen ska se ut */
     width:60%;                  /* den tar upp 60% av platsen den hade tagit upp annarsS */
     grid-area: tabell;
 }
@@ -262,7 +262,7 @@ figcaption{                     /* här är style för figcaption för bilden oc
     grid-area: Grupp1Tabell;
 }
 
-.KadettGrupp1{                  /* kadett grupp1 style */
+#KadettGrupp1{                  /* kadett grupp1 style */
     grid-area: KadettGrupp1;
 }
 
@@ -272,7 +272,7 @@ figcaption{                     /* här är style för figcaption för bilden oc
     margin-right: auto;
 }
 
-.Lorem_ipsum {
+#Lorem_ipsum {
     grid-area: Lorem_ipsum;
 }
 
@@ -292,37 +292,12 @@ figcaption{                     /* här är style för figcaption för bilden oc
     height: auto;
     display: grid;
     grid-template-areas:
-    "WRCrad1 .       WRCrad2"
-    ".       .       ."         /* rad med 50px mellanrum för att göra sidan änklare att läsa */
-    "WRCrad3 WRCrad3 WRCrad3";
-    grid-template-rows: auto 20px auto;
+    "RepsolWRC . StratosWRC"
+    "Lorem_ipsum1WRC . Lorem_ipsum2WRC"
+    " . . . "
+    "rallyvideo . Lorem_ipsum3WRC";
+    grid-template-rows:auto auto 20px auto;
     grid-template-columns: 1fr 50px 1fr;
-}
-
-#GruppWRC > section:nth-child(1){                       /* rad 1 grid med bild och text under*/
-    grid-area: WRCrad1;
-    display: grid;
-    grid-template-areas:
-    " RepsolWRC "
-    " Lorem_ipsum1WRC ";
-    grid-template-rows: 1fr auto;
-}
-
-#GruppWRC > section:nth-child(2){                       /* rad 2 text som hamnar bredvid rad1 den har också bild och text */
-    grid-area: WRCrad2;
-    display: grid;
-    grid-template-areas:
-    " StratosWRC "
-    " Lorem_ipsum2WRC ";
-    grid-template-rows: 1fr auto;
-}
-
-#GruppWRC > section:nth-child(3){                       /* Grid för rad 3 för att få ett 2 spalt layout eftersom att jag inte vet vad de andra sidorna räknas som */
-    grid-area: WRCrad3;
-    display: grid;
-    grid-template-areas: 
-    " rallyvideo . Lorem_ipsum3WRC ";
-    grid-template-columns: auto 20px auto;
 }
 
 .WRCbilder {
@@ -331,27 +306,27 @@ figcaption{                     /* här är style för figcaption för bilden oc
     margin-right: auto;
 }
 
-.RepsolWRC{                     /* Bild på WRC bil */
+#RepsolWRC{                     /* Bild på WRC bil */
     grid-area: RepsolWRC;
 }
 
-.StratosWRC{                    /* en till bild på en Lancia stratos */
+#StratosWRC{                    /* en till bild på en Lancia stratos */
     grid-area: StratosWRC;
 }
 
-.Lorem_ipsum1WRC{               /* Text */
+#Lorem_ipsum1WRC{               /* Jag använder inte typselektor hela tiden eftersom att det blir svårare att navigera CSS så därför använder jag ID här */
     grid-area: Lorem_ipsum1WRC;
 }
 
-.Lorem_ipsum2WRC{               /* Text */
+#Lorem_ipsum2WRC{               /* Text */
     grid-area: Lorem_ipsum2WRC;
 }
 
-.Lorem_ipsum3WRC{               /* Lorem Ipsum */
+#Lorem_ipsum3WRC{               /* Lorem Ipsum */
     grid-area: Lorem_ipsum3WRC;
 }
 
-.rallyvideo{                    /* Rally video */
+#rallyvideo{                    /* Rally video */
     grid-area: rallyvideo;
     height: 60vh;
 }
